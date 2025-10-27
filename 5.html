@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExercicioLaço 2</title>
-</head> 
+</head>
+
 <body>
     <h1>Registro do Cliente</h1>
     <hr>
 
     <form action="">
         <label for="usuario">Nome de Usuário:</label><br>
-        <input type="text" id="usuario"><br/>
+        <input type="text" id="usuario"><br />
         <label for="senha">Senha do Usuário:</label><br>
-        <input type="password" id="senha"><br/>
+        <input type="password" id="senha"><br />
         <br><br>
         <button type="button" onclick="cadastro()">Cadastre-se</button>
         <br><br>
@@ -29,10 +30,11 @@
             do {
                 if (senha == usuario) {
                     alert("Erro : a senha não pode ser igual ao nome de usuário. tente novamente!");
-
+                    return;
                 }
                 if (senha.length < 8) {
                     alert("Erro : a senha deve ter no mínimo 8 caracteres. tente novamente!");
+                    return;
 
                 }
             } while (senha.length < 8)
